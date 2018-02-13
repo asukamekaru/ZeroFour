@@ -1,0 +1,29 @@
+﻿2018/02/13 10:38:59 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour\ZeroFour.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt game.cpp GameMain.cpp graphics.cpp image.cpp input.cpp textureManager.cpp ZeroFour.cpp winmain.cpp
+         winmain.cpp
+         ZeroFour.cpp
+         textureManager.cpp
+         input.cpp
+         image.cpp
+         graphics.cpp
+         GameMain.cpp
+         game.cpp
+         コードを生成中...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour\Debug\ZeroFour.exe" /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Lib\x86" d3d9.lib d3dx9.lib winmm.lib xinput.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour\Debug\ZeroFour.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour\Debug\ZeroFour.lib" /MACHINE:X86 /SAFESEH Debug\game.obj
+         Debug\GameMain.obj
+         Debug\graphics.obj
+         Debug\image.obj
+         Debug\input.obj
+         Debug\textureManager.obj
+         Debug\ZeroFour.obj
+         Debug\winmain.obj
+     1>game.obj : warning LNK4075: /EDITANDCONTINUE は /SAFESEH の指定によって無視されます。
+         ZeroFour.vcxproj -> C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour\Debug\ZeroFour.exe
+     1>プロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour\ZeroFour.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:09.45
