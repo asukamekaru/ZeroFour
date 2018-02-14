@@ -1,4 +1,4 @@
-#include "ZeroFour.h"
+#include "gameMain.h"
 #include "BackGround.h"
 
 //=============================================================================
@@ -18,40 +18,21 @@ BackGround::~BackGround()
 //=============================================================================
 // 初期化
 //=============================================================================
-bool BackGround::initialize(Graphics *graphics, TextureManager *textureM, int left,
-							int top, float scale, COLOR_ARGB color)
+void BackGround::initialize()
 {
-	try {
-		Image::initialize(graphics, bakgroundNS::IMAGE_SIZE, bakgroundNS::IMAGE_SIZE, bakgroundNS::TEXTURE_COLS, textureM);
-		setCurrentFrame(bakgroundNS::BAR_FRAME);
-		spriteData.x = (float)left;
-		spriteData.y = (float)top;
-		spriteData.scale = scale;
-	}
-	catch(...)
-	{
-		return false;
-	}
-	//return okay
-	return true;
+	 // menu texture
+    if (!bg_city_Texture.initialize(graphics,BACKGROUND_CITY_IMAGE))
+        throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu texture"));
+    // menu image
+    if (!bgcitytex.initialize(graphics,0,0,0,&bg_city_Texture))
+        throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu"));
+
 }
 
 //=============================================================================
 // アップデート
 //=============================================================================
 void BackGround::update()
-{}
-
-//=============================================================================
-// 人工知能
-//=============================================================================
-void BackGround::ai()
-{}
-
-//=============================================================================
-// 当たり判定
-//=============================================================================
-void BackGround::collisions()
 {}
 
 //=============================================================================
@@ -70,19 +51,19 @@ void BackGround::render()
 //=============================================================================
 // リリース
 //=============================================================================
-//void BackGround::releaseAll()
-//{
-//	bg_city_Texture.onLostDevice();
-//	//Game::releaseAll();
-//	return;
-//}
-//
-////=============================================================================
-//// リセット
-////=============================================================================
-//void BackGround::resetAll()
-//{
-//	bg_city_Texture.onResetDevice();
-//	//Game::resetAll();
-//	return;
-//}
+void BackGround::releaseAll()
+{
+	bg_city_Texture.onLostDevice();
+	//Game::releaseAll();
+	return;
+}
+
+//=============================================================================
+// リセット
+//=============================================================================
+void BackGround::resetAll()
+{
+	bg_city_Texture.onResetDevice();
+	//Game::resetAll();
+	return;
+}

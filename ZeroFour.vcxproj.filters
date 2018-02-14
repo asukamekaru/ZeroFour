@@ -1,81 +1,123 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="audio.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="console.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="dashboard.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
     <ClCompile Include="game.cpp">
-      <Filter>CPP\Common</Filter>
+      <Filter>CPPs</Filter>
     </ClCompile>
     <ClCompile Include="graphics.cpp">
-      <Filter>CPP\Common</Filter>
+      <Filter>CPPs</Filter>
     </ClCompile>
     <ClCompile Include="image.cpp">
-      <Filter>CPP\Common</Filter>
+      <Filter>CPPs</Filter>
     </ClCompile>
     <ClCompile Include="input.cpp">
-      <Filter>CPP\Common</Filter>
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="inputDialog.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="messageDialog.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="net.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
+    <ClCompile Include="textDX.cpp">
+      <Filter>CPPs</Filter>
     </ClCompile>
     <ClCompile Include="textureManager.cpp">
-      <Filter>CPP\Common</Filter>
+      <Filter>CPPs</Filter>
     </ClCompile>
     <ClCompile Include="winmain.cpp">
-      <Filter>CPP\Common</Filter>
+      <Filter>CPPs</Filter>
     </ClCompile>
-    <ClCompile Include="ZeroFour.cpp">
-      <Filter>CPP\GameMain</Filter>
+    <ClCompile Include="gameMain.cpp">
+      <Filter>CPPs</Filter>
     </ClCompile>
-    <ClCompile Include="BackGround.cpp">
-      <Filter>CPP\GameMain</Filter>
+    <ClCompile Include="backGround.cpp">
+      <Filter>CPPs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="console.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
     <ClInclude Include="constants.h">
-      <Filter>H\Common</Filter>
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="dashboard.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Hs</Filter>
     </ClInclude>
     <ClInclude Include="game.h">
-      <Filter>H\Common</Filter>
+      <Filter>Hs</Filter>
     </ClInclude>
     <ClInclude Include="gameError.h">
-      <Filter>H\Common</Filter>
+      <Filter>Hs</Filter>
     </ClInclude>
     <ClInclude Include="graphics.h">
-      <Filter>H\Common</Filter>
+      <Filter>Hs</Filter>
     </ClInclude>
     <ClInclude Include="image.h">
-      <Filter>H\Common</Filter>
+      <Filter>Hs</Filter>
     </ClInclude>
     <ClInclude Include="input.h">
-      <Filter>H\Common</Filter>
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="inputDialog.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="messageDialog.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="net.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="textDX.h">
+      <Filter>Hs</Filter>
     </ClInclude>
     <ClInclude Include="textureManager.h">
-      <Filter>H\Common</Filter>
+      <Filter>Hs</Filter>
     </ClInclude>
-    <ClInclude Include="ZeroFour.h">
-      <Filter>H\GameMain</Filter>
+    <ClInclude Include="audio.h">
+      <Filter>Hs</Filter>
     </ClInclude>
-    <ClInclude Include="BackGround.h">
-      <Filter>H\GameMain</Filter>
+    <ClInclude Include="gameMain.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="backGround.h">
+      <Filter>Hs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="Change log.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="CPP">
-      <UniqueIdentifier>{4bc20df4-b8d2-49ef-85d3-60d948a6b6b8}</UniqueIdentifier>
+    <Filter Include="Hs">
+      <UniqueIdentifier>{55aac121-de23-43d7-a530-966345de0f04}</UniqueIdentifier>
     </Filter>
-    <Filter Include="H">
-      <UniqueIdentifier>{f000328c-060c-4a45-a51c-91f4fe25b6c2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CPP\GameMain">
-      <UniqueIdentifier>{9de07f16-c2b6-4277-bd43-15b267feb9d1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="H\GameMain">
-      <UniqueIdentifier>{cbaf64f8-aae5-426e-a97e-b7fbf5b24852}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CPP\Common">
-      <UniqueIdentifier>{008fe457-14f6-4e7a-97d0-c7c5dbae7249}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="H\Common">
-      <UniqueIdentifier>{b87a23cc-1f25-45fa-ac47-5d8ccbc285ae}</UniqueIdentifier>
+    <Filter Include="CPPs">
+      <UniqueIdentifier>{a84b5ef9-9b1f-4697-92af-25431710815e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

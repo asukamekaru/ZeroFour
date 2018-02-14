@@ -5,7 +5,7 @@
 #include "game.h"
 #include "textureManager.h"
 #include "image.h"
-#include "ZeroFour.h"
+#include "gameMain.h"
 
 namespace bakgroundNS//BackGroundNameSpace
 {
@@ -24,11 +24,8 @@ public:
 
     virtual ~BackGround();
 
-    bool initialize(Graphics *graphics, TextureManager *textureM, int left, int top,
-                    float scale, COLOR_ARGB color);
+    void initialize();
     void update();     
-    void ai();          
-    void collisions();  
     void render();      
     void releaseAll();
     void resetAll();
