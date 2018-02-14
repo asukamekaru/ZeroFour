@@ -26,15 +26,9 @@ void ZeroFour::initialize(HWND hwnd)
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing nebula texture"));
 	if (!car1tex.initialize(graphics,0,0,0,&car_1_Texture))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing nebula"));
-	//車1のテクスチャ
-	if (!bg_city_Texture.initialize(graphics,BG_CITY_IMG))
-		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing nebula texture"));
-	if (!bgcitytex.initialize(graphics,0,0,0,&bg_city_Texture))
-		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing nebula"));
-
-	bgcitytex.setX(0);
-    bgcitytex.setY(0);
-	bgcitytex.setScale(0.65f);
+	
+	m_background.initialize(graphics, &bg_city_Texture, 0, 0, 0.65f, graphicsNS::WHITE);
+	 
 	return;
 }
 
@@ -63,7 +57,8 @@ void ZeroFour::render()
 {
 	graphics->spriteBegin();//スプライトの描画を開始
 
-	bgcitytex.draw();
+    m_background.draw();
+
 	car1tex.draw();
 
 	graphics->spriteEnd();//スプライトの描画を終わる
@@ -75,7 +70,7 @@ void ZeroFour::render()
 //=============================================================================
 void ZeroFour::releaseAll()
 {
-	bg_city_Texture.onLostDevice();
+	//m_background.releaseAll();
 	car_1_Texture.onLostDevice();
 	Game::releaseAll();
 	return;
@@ -86,7 +81,7 @@ void ZeroFour::releaseAll()
 //=============================================================================
 void ZeroFour::resetAll()
 {
-	bg_city_Texture.onResetDevice();
+	//m_background.resetAll();
 	car_1_Texture.onResetDevice();
 	Game::resetAll();
 	return;

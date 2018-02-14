@@ -20,9 +20,9 @@
       <Filter>CPP\Common</Filter>
     </ClCompile>
     <ClCompile Include="ZeroFour.cpp">
-      <Filter>CPP\Common</Filter>
+      <Filter>CPP\GameMain</Filter>
     </ClCompile>
-    <ClCompile Include="GameMain.cpp">
+    <ClCompile Include="BackGround.cpp">
       <Filter>CPP\GameMain</Filter>
     </ClCompile>
   </ItemGroup>
@@ -49,9 +49,9 @@
       <Filter>H\Common</Filter>
     </ClInclude>
     <ClInclude Include="ZeroFour.h">
-      <Filter>H\Common</Filter>
+      <Filter>H\GameMain</Filter>
     </ClInclude>
-    <ClInclude Include="GameMain.h">
+    <ClInclude Include="BackGround.h">
       <Filter>H\GameMain</Filter>
     </ClInclude>
   </ItemGroup>

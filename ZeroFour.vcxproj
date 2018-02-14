@@ -88,7 +88,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp" />
-    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="BackGround.cpp" />
     <ClCompile Include="graphics.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="input.cpp" />
@@ -100,7 +100,7 @@
     <ClInclude Include="constants.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="gameError.h" />
-    <ClInclude Include="GameMain.h" />
+    <ClInclude Include="BackGround.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="input.h" />
