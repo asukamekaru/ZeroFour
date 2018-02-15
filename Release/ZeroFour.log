@@ -1,0 +1,14 @@
+﻿2018/02/15 15:40:31 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt backGround.cpp gameMain.cpp winmain.cpp
+         backGround.cpp
+     1>c:\users\kbc11606120\documents\game\zerofour\gameMain.h(29): error C2146: 構文エラー : ';' が、識別子 'background' の前に必要です。
+     1>c:\users\kbc11606120\documents\game\zerofour\gameMain.h(29): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+         gameMain.cpp
+         winmain.cpp
+     1>プロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+
+ビルドに失敗しました。
+
+経過時間 00:00:02.22

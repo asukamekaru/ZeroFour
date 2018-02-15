@@ -6,9 +6,9 @@
 #include <sstream>
 #include "game.h"
 #include "textureManager.h"
+#include "backGround.h"
 #include "image.h"
 #include "textDX.h"
-#include "BackGround.h"
 
 //=============================================================================
 // This class is the core of the game
@@ -16,28 +16,36 @@
 class GameMainScene : public Game
 {
 private:
-	BackGround background;//背景クラス
+	
 
-    // game items
-    TextureManager menuTexture; // textures
-    Image   menu;               // menu image
-    TextDX  *dxFont;            // フォント
-    std::string  message;
-    float messageY;
+	// ゲームアイテム
+	// 画像
+	TextureManager menuTexture; // メニューテクスチャ
+	//TextureManager bgCityTexture; // 背景テクスチャ
+	Image   menu;               // メニューイメージ
+	//Image   bgcity;               // 背景イメージ
+
+	//クラス
+	BackGround bg;
+
+	// フォント
+	TextDX  *dxFont;            // フォント
+	std::string  message;
+	float messageY;
 
 public:
-    // Constructor
-    GameMainScene();
-    // Destructor
-    virtual ~GameMainScene();
-    // Initialize the game
-    void initialize(HWND hwnd);
-    void update();      // must override pure virtual from Game
-    void ai();          // "
-    void collisions();  // "
-    void render();      // "
-    void releaseAll();
-    void resetAll();
+	// Constructor
+	GameMainScene();
+	// Destructor
+	virtual ~GameMainScene();
+	// Initialize the game
+	void initialize(HWND hwnd);
+	void update();      // must override pure virtual from Game
+	void ai();          // "
+	void collisions();  // "
+	void render();      // "
+	void releaseAll();
+	void resetAll();
 };
 
 #endif

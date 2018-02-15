@@ -1,48 +1,16 @@
-﻿2018/02/15 1:05:15 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "E:\Programs\ZeroFour\ZeroFour.vcxproj" (Build ターゲット)。
+﻿2018/02/15 15:57:31 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour.vcxproj" (Build ターゲット)。
      1>ClCompile:
-         E:\Program Files (x86)\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt audio.cpp backGround.cpp console.cpp dashboard.cpp entity.cpp game.cpp gameMain.cpp graphics.cpp image.cpp input.cpp inputDialog.cpp messageDialog.cpp text.cpp textDX.cpp textureManager.cpp winmain.cpp
-         audio.cpp
-         コードを生成中...
-         コンパイル中...
-         winmain.cpp
-         textureManager.cpp
-         textDX.cpp
-         text.cpp
-         messageDialog.cpp
-         inputDialog.cpp
-         input.cpp
-         image.cpp
-         graphics.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt backGround.cpp gameMain.cpp winmain.cpp
          gameMain.cpp
-         game.cpp
-         entity.cpp
-         dashboard.cpp
-         console.cpp
          backGround.cpp
+     1>c:\users\kbc11606120\documents\game\zerofour\gamemain.h(29): error C2146: 構文エラー : ';' が、識別子 'bg' の前に必要です。
+     1>c:\users\kbc11606120\documents\game\zerofour\gamemain.h(29): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
          コードを生成中...
-     1>e:\programs\zerofour\background.cpp(16): warning C4717: 'BackGround::~BackGround' : すべてのコントロールのパス、関数を回帰するとランタイム スタック オーバーフローが発生します。
-       Link:
-         E:\Program Files (x86)\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Programs\ZeroFour\Debug\ZeroFour.exe" /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Lib\x86" d3d9.lib d3dx9.lib winmm.lib xinput.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Programs\ZeroFour\Debug\ZeroFour.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Programs\ZeroFour\Debug\ZeroFour.lib" /MACHINE:X86 /SAFESEH Debug\audio.obj
-         Debug\backGround.obj
-         Debug\console.obj
-         Debug\dashboard.obj
-         Debug\entity.obj
-         Debug\game.obj
-         Debug\graphics.obj
-         Debug\inputDialog.obj
-         Debug\messageDialog.obj
-         Debug\net.obj
-         Debug\text.obj
-         Debug\textureManager.obj
-         Debug\input.obj
-         Debug\gameMain.obj
-         Debug\image.obj
-         Debug\textDX.obj
-         Debug\winmain.obj
-         ZeroFour.vcxproj -> E:\Programs\ZeroFour\Debug\ZeroFour.exe
-     1>プロジェクト "E:\Programs\ZeroFour\ZeroFour.vcxproj" (Build ターゲット) のビルドが完了しました。
+         スキップ中... (関連する変更は検出されませんでした)
+         winmain.cpp
+     1>プロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
 
-ビルドに成功しました。
+ビルドに失敗しました。
 
-経過時間 00:00:14.73
+経過時間 00:00:03.39

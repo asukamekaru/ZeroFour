@@ -6,29 +6,27 @@
 #include "textureManager.h"
 #include "image.h"
 #include "gameMain.h"
+#include "entity.h"
+#include "constants.h"
 
 namespace bakgroundNS//BackGroundNameSpace
 {
-    const int   IMAGE_SIZE = 32;        // each texture size
-    const int   TEXTURE_COLS = 8;       // texture columns
-    const int   BAR_FRAME = 44;         // the frame number of the bar
+
 }
 
-class BackGround: public Image
+class BackGround: public Entity
 {
 private:
-	TextureManager	bg_city_Texture; //îwåi(ÉVÉeÉB)
-	Image			bgcitytex;
+	TextureManager bgCityTexture; // îwåiÉeÉNÉXÉ`ÉÉ
+	Image   bgcity;               // îwåiÉCÉÅÅ[ÉW
+
 public:
-    BackGround();
-
-    virtual ~BackGround();
-
-    void initialize();
-    void update();     
-    void render();      
-    void releaseAll();
-    void resetAll();
+	BackGround();
+	void initialize();
+	void update();     
+	void render();
+	void releaseAll();
+	void resetAll();
 };
 
 #endif
