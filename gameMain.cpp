@@ -5,6 +5,8 @@
 
 #include "gameMain.h"
 
+using namespace gamemainNS;
+
 //=============================================================================
 // コンストラクタ
 //=============================================================================
@@ -37,17 +39,15 @@ void GameMainScene::initialize(HWND hwnd)
 	if (!menu.initialize(graphics,0,0,0,&menuTexture))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu"));
 
-	//// シティ背景テクスチャ
-	//if (!bgCityTexture.initialize(graphics,BR_CITY_IMAGE))
-	//	throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city background texture"));
-	//// シティイメージ
-	//if (!bgcity.initialize(graphics,0,0,0,&bgCityTexture))
-	//	throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city"));
+	// シティ背景テクスチャ
+	if (!bgCityTexture.initialize(graphics,BR_CITY_IMAGE))
+		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city background texture"));
+	// シティイメージ
+	if (!bgcity.initialize(graphics,0,0,0,&bgCityTexture))
+		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city"));
 
-
-
-	bg.initialize();
-
+	//背景初期化
+	background.initialize(bgcity, 0, BG_IMG_Y, BG_IMG_SCALE);
 
 	/* 文字記入方法*/
 	//if(dxFont->initialize(graphics, 18, true, false, "Arial") == false)
@@ -97,7 +97,6 @@ void GameMainScene::update()
 	//    menu.setY(0);
 	//    messageY = GAME_HEIGHT;
 	//}
-	bg.update();
 }
 
 //=============================================================================
@@ -119,9 +118,13 @@ void GameMainScene::render()
 {
 	graphics->spriteBegin();                // begin drawing sprites
 
+	// 1.背景
+	bgcity.draw();//背景描画
+
 	menu.draw();
 
-	bg.render();
+
+	background.render();
 	//dxFont->setFontColor(graphicsNS::ORANGE);
 	//dxFont->print(message,20,(int)messageY);
 
@@ -135,8 +138,7 @@ void GameMainScene::releaseAll()
 {
 	//dxFont->onLostDevice();
 	menuTexture.onLostDevice();
-	//bgCityTexture.onLostDevice();
-	bg.releaseAll();
+	bgCityTexture.onLostDevice();
 	Game::releaseAll();
 	return;
 }
@@ -147,9 +149,9 @@ void GameMainScene::releaseAll()
 void GameMainScene::resetAll()
 {
 	menuTexture.onResetDevice();
-	//bgCityTexture.onResetDevice();
+	bgCityTexture.onResetDevice();
 	//dxFont->onResetDevice();
-	bg.resetAll();
+
 	Game::resetAll();
 	return;
 }

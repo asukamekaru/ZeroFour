@@ -1,5 +1,7 @@
 #include "backGround.h"
 
+using namespace backgroundNS;
+
 //=============================================================================
 // コンソール
 //=============================================================================
@@ -9,19 +11,19 @@ BackGround::BackGround() : Entity()
 //=============================================================================
 // 初期化
 //=============================================================================
-void BackGround::initialize()
+bool BackGround::initialize(Image &img,int setX,int setY,float scale)
 {
-	// シティ背景テクスチャ
-	if (!bgCityTexture.initialize(graphics,BR_CITY_IMAGE))
-		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city background texture"));
-	// シティイメージ
-	if (!bgcity.initialize(graphics,0,0,0,&bgCityTexture))
-		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city"));
-
-	bgcity.setScale(0.5f);//背景スケール設定
-	bgcity.setY(-200);//背景Y座標設定
+	try {
+		img.setX((float)setX);	// X座標の設定
+		img.setY((float)setY);	// Y座標の設定
+		img.setScale(scale);	// SCALSEの設定
+	}
+	catch(...)
+	{
+		return false;
+	}
+	return true;
 }
-
 //=============================================================================
 // アップデート
 //=============================================================================
@@ -34,13 +36,8 @@ void BackGround::update()
 //=============================================================================
 void BackGround::render()
 {
-	//graphics->spriteBegin();//スプライトの描画を開始
 
-	//bgcitytex.draw();
 
-	//graphics->spriteEnd();//スプライトの描画を終わる
-
-	bgcity.draw();
 
 }
 
@@ -51,7 +48,7 @@ void BackGround::releaseAll()
 {
 	//bg_city_Texture.onLostDevice();
 	//Game::releaseAll();
-	bgCityTexture.onLostDevice();
+
 	return;
 }
 
@@ -60,7 +57,6 @@ void BackGround::releaseAll()
 //=============================================================================
 void BackGround::resetAll()
 {
-	bgCityTexture.onResetDevice();
 	//bg_city_Texture.onResetDevice();
 	//Game::resetAll();
 	return;

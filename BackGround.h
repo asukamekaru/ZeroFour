@@ -5,24 +5,23 @@
 #include "game.h"
 #include "textureManager.h"
 #include "image.h"
-#include "gameMain.h"
 #include "entity.h"
 #include "constants.h"
 
-namespace bakgroundNS//BackGroundNameSpace
+namespace backgroundNS//BackGroundNameSpace
 {
-
+	const int   IMAGE_SIZE = 32;        // each texture size
+	const int   TEXTURE_COLS = 8;       // texture columns
 }
 
 class BackGround: public Entity
 {
 private:
-	TextureManager bgCityTexture; // îwåiÉeÉNÉXÉ`ÉÉ
-	Image   bgcity;               // îwåiÉCÉÅÅ[ÉW
+
 
 public:
 	BackGround();
-	void initialize();
+	bool initialize(Image &img,int setX,int setY,float scale);
 	void update();     
 	void render();
 	void releaseAll();
