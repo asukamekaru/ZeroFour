@@ -15,7 +15,7 @@ namespace gamemainNS{
 
 	//各背景のサイズ等
 	//stage1
-	const int	BG_IMG_Y		= -100;
+	const float	BG_IMG_Y	 = -100;
 	const float BG_IMG_SCALE = 0.5;
 }
 //=============================================================================
@@ -29,8 +29,6 @@ private:
 	TextureManager menuTexture; // メニューテクスチャ
 	Image   menu;               // メニューイメージ
 	TextureManager bgCityTexture; // 背景テクスチャ
-	Image   bgcity;               // 背景イメージ
-
 	//クラス
 	BackGround background;
 
