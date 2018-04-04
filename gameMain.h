@@ -9,6 +9,7 @@
 #include "backGround.h"
 #include "image.h"
 #include "textDX.h"
+#include "carMain.h"
 
 
 namespace gamemainNS{
@@ -31,6 +32,7 @@ private:
 	TextureManager bgCityTexture; // 背景テクスチャ
 	//クラス
 	BackGround background;
+	CarMain carmain;
 
 	// フォント
 	TextDX  *dxFont;            // フォント

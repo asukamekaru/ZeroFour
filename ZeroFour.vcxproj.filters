@@ -52,6 +52,9 @@
     <ClCompile Include="backGround.cpp">
       <Filter>CPPs</Filter>
     </ClCompile>
+    <ClCompile Include="carMain.cpp">
+      <Filter>CPPs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="console.h">
@@ -106,6 +109,9 @@
       <Filter>Hs</Filter>
     </ClInclude>
     <ClInclude Include="backGround.h">
+      <Filter>Hs</Filter>
+    </ClInclude>
+    <ClInclude Include="carMain.h">
       <Filter>Hs</Filter>
     </ClInclude>
   </ItemGroup>

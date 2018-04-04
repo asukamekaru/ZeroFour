@@ -32,11 +32,12 @@ void GameMainScene::initialize(HWND hwnd)
 {
 	Game::initialize(hwnd); // スローゲームエラー
 
+	//********************テクスチャの初期化********************//
 	// メニューテクスチャ
 	if (!menuTexture.initialize(graphics,MENU_IMAGE))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu texture"));
 	// シティ背景テクスチャ
-	if (!bgCityTexture.initialize(graphics,BR_CITY_IMAGE))
+	if (!bgCityTexture.initialize(graphics,BR_CITY1_IMAGE))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu texture"));
 
 	// メニューイメージ
@@ -51,7 +52,8 @@ void GameMainScene::initialize(HWND hwnd)
 	background.setX(0);
 	background.setY(gamemainNS::BG_IMG_Y);
 	background.setScale(BG_IMG_SCALE);
-	// シティイメージ初期化
+
+	carmain.initialize();
 
 
 	/* 文字記入方法*/
@@ -127,6 +129,7 @@ void GameMainScene::render()
 	// 1.背景
 	background.draw();//背景描画
 
+	carmain.render();
 	//menu.draw();
 	//dxFont->setFontColor(graphicsNS::ORANGE);
 	//dxFont->print(message,20,(int)messageY);
