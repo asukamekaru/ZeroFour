@@ -32,22 +32,29 @@ void GameMainScene::initialize(HWND hwnd)
 {
 	Game::initialize(hwnd); // スローゲームエラー
 
+	//********************テクスチャの初期化********************//
 	// メニューテクスチャ
 	if (!menuTexture.initialize(graphics,MENU_IMAGE))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu texture"));
+	// シティ背景テクスチャ
+	if (!bgCityTexture.initialize(graphics,BR_CITY1_IMAGE))
+		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu texture"));
+
 	// メニューイメージ
 	if (!menu.initialize(graphics,0,0,0,&menuTexture))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu"));
 
-	// シティ背景テクスチャ
-	if (!bgCityTexture.initialize(graphics,BR_CITY_IMAGE))
+	// シティ背景イメージ
+	if (!background.initialize(this, 5570, 1754, 0,&bgCityTexture))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city background texture"));
-	// シティイメージ
-	if (!bgcity.initialize(graphics,0,0,0,&bgCityTexture))
-		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing city"));
+	background.setFrames(0, 0);
+	background.setCurrentFrame(0);
+	background.setX(0);
+	background.setY(gamemainNS::BG_IMG_Y);
+	background.setScale(BG_IMG_SCALE);
 
-	//背景初期化
-	background.initialize(bgcity, 0, BG_IMG_Y, BG_IMG_SCALE);
+	carmain.initialize();
+
 
 	/* 文字記入方法*/
 	//if(dxFont->initialize(graphics, 18, true, false, "Arial") == false)
@@ -79,6 +86,7 @@ void GameMainScene::initialize(HWND hwnd)
 void GameMainScene::update()
 {
 	/* スクロール*/
+	background.update(frameTime,0.05f);
 	//if(menu.getDegrees() > 0)
 	//{
 	//    menu.setDegrees(menu.getDegrees() - frameTime * 120);
@@ -119,12 +127,10 @@ void GameMainScene::render()
 	graphics->spriteBegin();                // begin drawing sprites
 
 	// 1.背景
-	bgcity.draw();//背景描画
+	background.draw();//背景描画
 
-	menu.draw();
-
-
-	background.render();
+	carmain.render();
+	//menu.draw();
 	//dxFont->setFontColor(graphicsNS::ORANGE);
 	//dxFont->print(message,20,(int)messageY);
 

@@ -21,9 +21,8 @@ private:
 
 public:
 	BackGround();
-	bool initialize(Image &img,int setX,int setY,float scale);
-	void update();     
-	void render();
+	virtual bool initialize(Game *gamePtr, int width, int height, int ncols, TextureManager *textureM);
+	void update(float frameTime,float speed); 
 	void releaseAll();
 	void resetAll();
 };

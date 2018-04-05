@@ -29,7 +29,10 @@ const float MAX_FRAME_TIME = 1.0f/MIN_FRAME_RATE; // maximum time used in calcul
 
 // 使う画像
 const char MENU_IMAGE[] =     "pictures\\menu.png";      // menu texture
-const char BR_CITY_IMAGE[] =     "pictures\\background_city_skyline.jpg";// background city texture
+//背景
+const char BR_CITY1_IMAGE[] =     "pictures\\background_city_skyline.jpg";// background city texture
+//車
+const char CAR_1_IMAGE[] = "pictures\\car_1.png";// car1 texture
 
 // オーディオファイル
 
