@@ -26,7 +26,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -90,6 +90,7 @@
   <ItemGroup>
     <ClCompile Include="audio.cpp" />
     <ClCompile Include="backGround.cpp" />
+    <ClCompile Include="carBody.cpp" />
     <ClCompile Include="carMain.cpp" />
     <ClCompile Include="console.cpp" />
     <ClCompile Include="dashboard.cpp" />
@@ -110,6 +111,7 @@
   <ItemGroup>
     <ClInclude Include="audio.h" />
     <ClInclude Include="backGround.h" />
+    <ClInclude Include="carBody.h" />
     <ClInclude Include="carMain.h" />
     <ClInclude Include="console.h" />
     <ClInclude Include="constants.h" />

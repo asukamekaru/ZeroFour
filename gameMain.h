@@ -27,12 +27,12 @@ class GameMainScene : public Game
 private:
 	// ゲームアイテム
 	// 画像
-	TextureManager menuTexture; // メニューテクスチャ
-	Image   menu;               // メニューイメージ
-	TextureManager bgCityTexture; // 背景テクスチャ
+	TextureManager	menuTexture;		// メニューテクスチャ
+	Image			menu;               // メニューイメージ
+	TextureManager	bgCityTexture;		// 背景テクスチャ
 	//クラス
-	BackGround background;
-	CarMain carmain;
+	BackGround		background;			//背景
+	CarMain			carmain;			//車メイン
 
 	// フォント
 	TextDX  *dxFont;            // フォント

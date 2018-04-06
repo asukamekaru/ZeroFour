@@ -53,7 +53,7 @@ void GameMainScene::initialize(HWND hwnd)
 	background.setY(gamemainNS::BG_IMG_Y);
 	background.setScale(BG_IMG_SCALE);
 
-	carmain.initialize();
+	carmain.initialize(hwnd);
 
 
 	/* •¶Žš‹L“ü•û–@*/

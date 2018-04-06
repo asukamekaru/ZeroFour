@@ -25,19 +25,18 @@ CarMain::~CarMain()
 //=============================================================================
 // 初期化
 //=============================================================================
-void CarMain::initialize()
+void CarMain::initialize(HWND hwnd)
 {
-	//Entity::initialize(); // スローゲームエラー
+	Game::initialize(hwnd); // スローゲームエラー
 
 	//********************テクスチャの初期化********************//
-	// 車1テクスチャ
-	if (!car1Texture.initialize(graphics, CAR_1_IMAGE))
+	// シティ背景テクスチャ
+	if (!car1Texture.initialize(graphics,CAR_1_IMAGE))
 		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu texture"));
 	
 	//********************イメージの初期化********************//
 	// 車1イメージ
-	if (!car1.initialize(graphics, 0, 0, 0, &car1Texture))
-		throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing menu"));
+	carbody.initialize(graphics, &car1Texture, 0, carmainNS::CARIMAGE_Y, 2.0f, graphicsNS::WHITE);
 
 	return;
 }
@@ -51,13 +50,25 @@ void CarMain::update()
 }
 
 //=============================================================================
+// 人工知能
+//=============================================================================
+void CarMain::ai()
+{}
+
+//=============================================================================
+// 当たり判定
+//=============================================================================
+void CarMain::collisions()
+{}
+
+//=============================================================================
 // 描画
 //=============================================================================
 void CarMain::render()
 {
 	graphics->spriteBegin();                // begin drawing sprites
 
-	car1.draw();
+	carbody.draw();
 
 	graphics->spriteEnd();                  // end drawing sprites
 }

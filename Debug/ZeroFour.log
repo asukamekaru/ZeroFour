@@ -1,6 +1,38 @@
-﻿  gameMain.cpp
-  carMain.cpp
-  コードを生成中...
-  スキップ中... (関連する変更は検出されませんでした)
-  winmain.cpp
-  ZeroFour.vcxproj -> C:\Users\ask22\Documents\ゲーム制作\ZeroFour\Debug\ZeroFour.exe
+﻿2018/04/06 12:12:48 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour.vcxproj" (Build ターゲット)。
+       プロジェクト ファイルに ToolsVersion="15.0" が含まれています。このツールセットが不明であるか、存在しない可能性があります。その場合は、適切なバージョンの MSBuild をインストールして解決するか、ビルドがポリシー上の理由により特定の ToolsVersion を使用するよう強制されている可能性があります。プロジェクトを ToolsVersion="4.0" として扱います。詳細については、http://go.microsoft.com/fwlink/?LinkId=291333 を参照してください。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt gameMain.cpp
+         gameMain.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kbc11606120\Documents\GAME\ZeroFour\Debug\ZeroFour.exe" /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Lib\x86" d3d9.lib d3dx9.lib winmm.lib xinput.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\kbc11606120\Documents\GAME\ZeroFour\Debug\ZeroFour.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kbc11606120\Documents\GAME\ZeroFour\Debug\ZeroFour.lib" /MACHINE:X86 /SAFESEH Debug\audio.obj
+         Debug\backGround.obj
+         Debug\carBody.obj
+         Debug\carMain.obj
+         Debug\console.obj
+         Debug\dashboard.obj
+         Debug\entity.obj
+         Debug\game.obj
+         Debug\graphics.obj
+         Debug\inputDialog.obj
+         Debug\messageDialog.obj
+         Debug\net.obj
+         Debug\text.obj
+         Debug\textureManager.obj
+         Debug\input.obj
+         Debug\gameMain.obj
+         Debug\image.obj
+         Debug\textDX.obj
+         Debug\winmain.obj
+     1>audio.obj : warning LNK4075: /EDITANDCONTINUE は /SAFESEH の指定によって無視されます。
+     1>net.obj : error LNK2038: '_MSC_VER' の不一致が検出されました。値 '1900' が 1700 の値 'backGround.obj' と一致しません。
+     1>msvcprtd.lib(MSVCP110D.dll) : error LNK2005: "public: __thiscall std::_Container_base12::_Container_base12(void)" (??0_Container_base12@std@@QAE@XZ) は既に net.obj で定義されています。
+     1>msvcprtd.lib(MSVCP110D.dll) : error LNK2005: "public: __thiscall std::_Container_base12::~_Container_base12(void)" (??1_Container_base12@std@@QAE@XZ) は既に net.obj で定義されています。
+     1>msvcprtd.lib(MSVCP110D.dll) : error LNK2005: "public: void __thiscall std::_Container_base12::_Orphan_all(void)" (?_Orphan_all@_Container_base12@std@@QAEXXZ) は既に net.obj で定義されています。
+     1>net.obj : error LNK2019: 未解決の外部シンボル "void __cdecl operator delete(void *,unsigned int)" (??3@YAXPAXI@Z) が関数 "public: virtual void * __thiscall Net::`scalar deleting destructor'(unsigned int)" (??_GNet@@UAEPAXI@Z) で参照されました。
+     1>C:\Users\kbc11606120\Documents\GAME\ZeroFour\Debug\ZeroFour.exe : fatal error LNK1120: 1 件の未解決の外部参照
+     1>プロジェクト "C:\Users\kbc11606120\Documents\GAME\ZeroFour\ZeroFour.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+
+ビルドに失敗しました。
+
+経過時間 00:00:02.69
